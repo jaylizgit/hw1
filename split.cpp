@@ -11,6 +11,7 @@ the function below should be the only one in this file.
 */
 
 #include "split.h"
+#include <cstddef>
 
 /* Add a prototype for a helper function here if you need */
 
@@ -31,7 +32,7 @@ void split(Node*& in, Node*& odds, Node*& evens)
 
 
     //odd if statement recheck val spelling 
-    if(curr->val % 2 != 0) {
+    if(curr->value % 2 != 0) {
         curr->next = odds;
         odds = curr;
 
