@@ -16,8 +16,29 @@ the function below should be the only one in this file.
 
 void split(Node*& in, Node*& odds, Node*& evens)
 {
-  /* Add code here */
-// WRITE YOUR CODE HERE
-}
 
-/* If you needed a helper function, write it here */
+    if (in == NULL) return;
+
+    //moves forward and has the node move foward so recursion occurs and will end up null
+    Node* curr = in; 
+    in = in->next;
+
+    //detach to prevent any fiture leaks from old chain 
+    curr->next = NULL;
+
+    //recurse now / maintasins order 
+    split(in, odds, evens);
+
+
+    //odd if statement recheck val spelling 
+    if(curr->val % 2 != 0) {
+        curr->next = odds;
+        odds = curr;
+
+    }
+    else {
+        curr->next = evens;
+        evens = curr;
+    }
+
+}
