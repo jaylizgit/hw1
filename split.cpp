@@ -12,7 +12,7 @@ the function below should be the only one in this file.
 
 #include "split.h"
 #include <cstddef>
-
+// USED EOF CHECK BEC I COULD NOT UPDATE FROM VSCODE TO GIT TO CODIO I KEPT HAVING ERRORS AND BASH EOF IN CODIO WAS THE ONLY THING THAT WORKED WILL BE GOING TO OH FOR THIS
 /* Add a prototype for a helper function here if you need */
 
 void split(Node*& in, Node*& odds, Node*& evens)
